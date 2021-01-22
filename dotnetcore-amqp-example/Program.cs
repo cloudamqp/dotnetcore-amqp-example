@@ -8,7 +8,7 @@ namespace dotnetcore_amqp_example
     class Program
     {
         // The url of the AMQP server, should look like amqps://[username]:[password]@[instance]/[vhost]
-        static readonly string _url = "amqps://[username]:[password]@[instance]/[vhost]";
+        static readonly string _url = "amqp://guest:guest@localhost/%2f";
         static ManualResetEvent _quitEvent = new ManualResetEvent(false);
 
         public static int Main(string[] args)
