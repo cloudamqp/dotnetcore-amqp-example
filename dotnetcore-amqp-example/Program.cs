@@ -13,6 +13,10 @@ namespace dotnetcore_amqp_example
 
         public static int Main(string[] args)
         {
+            var url = _url;
+            if (args.Length > 0)
+                url = args[0];
+
             Console.CancelKeyPress += (sender, eArgs) => {
                 // set the quit event so that the Consumer will recieve it and quit gracefully
                 _quitEvent.Set();
