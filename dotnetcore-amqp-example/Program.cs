@@ -26,14 +26,14 @@ namespace dotnetcore_amqp_example
             };
 
             // setup worker thread
-            var consumer = new Consumer(_url, _quitEvent);
+            var consumer = new Consumer(url, _quitEvent);
             var consumerThread = new Thread(consumer.ConsumeQueue) { IsBackground = true };
             consumerThread.Start();
 
             // create a connection and open a channel, dispose them when done
             var factory = new ConnectionFactory
             {
-                Uri = new Uri(_url)
+                Uri = new Uri(url)
             };
 
             using var connection = factory.CreateConnection();
