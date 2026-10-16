@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="AmqpExample.Tests/AmqpExample.Tests.csproj" />
+  <Project Path="AmqpExample/AmqpExample.csproj" />
+</Solution>
